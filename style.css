@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Neue', cursive;
+  padding: 0 20px;
+}
+
+.wrapper {
+  padding-top: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card_wrapper:hover {
+  box-shadow: 1px 1px 14px black;
+  transition: 0.4s;
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.card_info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 80px;
+}
+
+.card span {
+  margin-top: 10px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.char_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-right: -15px;
+  margin-bottom: 50px;
+}
+
+.card_wrapper {
+  margin-right: 15px;
+  margin-bottom: 10px;
+  border: 4px solid black;
+  border-radius: 6px;
+}
+
+.bookmark {
+  display: block;
+  width: 100%;
+}
+
+.bookmark_wrapper{
+  transition: 0.4s;
+}
+
+.bookmark_wrapper:hover {
+  background-color: rgba(182, 20, 20, 0.1);
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.bookmarks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-right: -15px;
+}
+
+.bookmarks .bookmark {
+  display: none;
+}
+
+h2 {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+h2:hover {
+  color: rgb(182, 20, 20);
+}
+
+form {
+  border-radius: 40px;
+}
+
+.search_box {
+  background: rgb(182, 20, 20);
+  height: 70px;
+  padding: 10px;
+  border-radius: 40px;
+  margin-bottom: 30px;
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+.search_box:hover > #input {
+  width: 250px;
+  padding: 0 6px;
+  cursor: pointer;
+}
+
+.search_box:hover > .hero_logo img {
+  border-radius: 50%;
+  filter: brightness(0) invert(1);
+}
+
+.bookmark.active {
+  color: rgb(182, 20, 20);
+  background-color: black;
+  padding: 1px;
+}
+
+.hero_logo {
+  background-color: white;
+  float: right;
+  width: 40px;
+  border-radius: 50%;
+  background: rgb(182, 20, 20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.hero_logo img {
+  width: 34px;
+  filter: brightness(0);
+  transition: 0.4s;
+}
+
+#input {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+  transition: 0.4s;
+  line-height: 60px;
+  width: 0px;
+  font-family: 'Comic Neue', cursive;
+}
+
+#input::placeholder {
+  color: rgb(216, 211, 211);
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .char_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bookmarks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 20px;
+  }
+  
+  .char_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bookmarks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
